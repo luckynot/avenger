@@ -1,0 +1,23 @@
+server:
+  port: 40000
+  servlet:
+    context-path: /avenger
+spring:
+  application:
+    name: avenger
+  cloud:
+    config:
+      server:
+        git:
+          # Git仓库地址
+          uri: https://github.com/luckynot/spring-cloud-config-repo.git
+          # Git仓库账号
+          username: luckynot
+          # Git仓库密码
+          password: xs1050201913
+          search-paths: captain
+          clone-on-start: true
+logging:
+  level:
+    org.springframework.cloud: DEBUG
+    org.springframework.boot: DEBUG
